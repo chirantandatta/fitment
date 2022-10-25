@@ -1,0 +1,9 @@
+pandas
+nltk
+flask
+sklearn
+joblib
+gTTs
+wikipedia
+playsound==1.2.2
+
