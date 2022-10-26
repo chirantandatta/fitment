@@ -2,8 +2,6 @@ import os
 import warnings
 from flask import Flask, render_template, url_for, request, redirect,session
 import pandas as pd
-import nltk
-nltk.download("all")
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -69,7 +67,6 @@ def prediction():
     tts=gTTS(f,lang='en')
     files="summarys.mp3"
     tts.save(files)
-    playsound.playsound(files)
     os.remove(files)
     return render_template('predict.html',display=display,book=n,category=f)
  except:
@@ -83,5 +80,5 @@ def prediction():
 def bookgenre():
     session['bookname']=request.form.get('book')
     return redirect(url_for("prediction"))
-if __name__ == "__main__":
-    app.run(host='172.17.0.2',port=2000)
+port=int(os.environ.get("PORT",2000))
+app.run(host='0.0.0.0',port=port)
