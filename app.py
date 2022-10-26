@@ -65,7 +65,7 @@ def prediction():
     m=k
     f="The category of book is "+m
     n="The name of book  is "+"'"+bookname+"'"
-    display="Thank You.Here is the information provided"
+    display="Thank You.Here is the information you needed"
     tts=gTTS(f,lang='en')
     files="summarys.mp3"
     tts.save(files)
