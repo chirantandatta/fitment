@@ -15,7 +15,16 @@
       background: linear-gradient(135deg, #53982c, #39c2de);
       
     }
-    
+    .container{
+            position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+        }
     
     ul {
       background: #e7ff33;
@@ -187,9 +196,10 @@
         <div class="span4">
             
 <h1 >{{display}}</h1>
-<h2 ><span  style="color: whitesmoke;" >{{book}}</span></h2>
 <br>
-            <h2 ><span  style="color: whitesmoke;" >{{category}}</span></h2>
+<h2 ><span  style="color: red;" >{{book}}</span></h2>
+
+            <h2 ><span  style="color: red;" >{{category}}</span></h2>
 
 </div>
 <div class="span4"></div>
