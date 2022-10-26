@@ -1,1 +1,1 @@
-web: Flask_APP=app.py python -m flask run --port=2000
+web: python app.py
