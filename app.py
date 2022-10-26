@@ -2,6 +2,8 @@ import os
 import warnings
 from flask import Flask, render_template, url_for, request, redirect,session
 import pandas as pd
+import nltk
+nltk.download("all")
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from sklearn.feature_extraction.text import TfidfVectorizer
